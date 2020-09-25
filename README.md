@@ -92,39 +92,6 @@ git pull --rebase
 ```
 
 
-## Cherry-pick
-
-### Cherry pick single commit
-```
-git cherry-pick <hash>
-```
-
-### Cherry pick multiple commits
-
-###### (A not included)
-```
-git cherry-pick A..B
-```
-
-###### (A included)
-```
-git cherry-pick A^..B
-```
-
-### Reference cherry picked commit(s)
-```
-git cherry-pick -x <hash>
-```
-
-```
-git cherry-pick -x A..B
-```
-
-```
-git cherry-pick -x A^..B
-```
-
-
 ## Rerere
 
 http://scottchacon.com/2010/03/08/rerere.html
