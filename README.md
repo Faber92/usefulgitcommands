@@ -65,25 +65,6 @@ git push origin `tagname`
 git push --delete origin `tagname`
 ```
 
-
-## Stash
-
-### To list stashes
-```
-git stash list
-```
-
-### To show files changed
-```
-git stash show stash@{stash_number}
-```
-
-### To show content of files changed
-```
-git stash show -p stash@{stash_number}
-```
-
-
 ## Sign commits
 
 ### To configure your Git client to sign commits by default for a local repository
