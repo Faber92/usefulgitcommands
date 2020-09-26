@@ -43,28 +43,6 @@ git_remove_merged_in() { git fetch -pq && git checkout $1 -q && for branch in `g
 ```
 
 
-## Tags
-
-### Create a tag locally
-```
-git tag `tagname`
-```
-
-### Remove a tag locally
-```
-git tag --delete `tagname`
-```
-
-### Push a tag remotely
-```
-git push origin `tagname`
-```
-
-### Remove a tag remotely
-```
-git push --delete origin `tagname`
-```
-
 ## Sign commits
 
 ### To configure your Git client to sign commits by default for a local repository
