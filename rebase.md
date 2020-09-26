@@ -20,8 +20,10 @@ git rebase master [feature1]
 ###### After
 ```
 a---b---c---d---e  master
-                 \
-                  f'--g'--h'  feature1
+        |        \
+        |         f'--g'--h'  feature1
+         \
+          f---g---h  feature1@{1}
 ```
 
 ### Rebase current branch starting from <commit_hash>
@@ -29,12 +31,12 @@ a---b---c---d---e  master
 git rebase -i <commit_hash>
 ```
 
-### To apply all your yet-to-be-pushed commits on top of the remote tree commits. Basically a git fetch and then git rebase on remote.
+### Apply all your yet-to-be-pushed commits on top of the remote tree commits. Basically a git fetch and then git rebase on remote.
 ```
 git pull --rebase
 ```
 
-### To move hunks between commits while rebasing
+### Move hunks between commits while rebasing
 
 ###### Edit the todo list during an interactive rebase.
 ```
@@ -119,10 +121,10 @@ git rebase --onto feature1 feature1@{1} [feature2]
 ###### After
 ```
 a---b---c---d---e  master
-        |       \
-        |        f'--g'--h'--i'--j'  feature1
-        |                         \
-        |                          k'--l'--m'  feature2
+        |        \
+        |         f'--g'--h'--i'--j'  feature1
+        |                          \
+        |                           k'--l'--m'  feature2
          \
           f---g---h---i---j  feature1@{1}
                            \
