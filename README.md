@@ -62,14 +62,6 @@ git status -sb | egrep 'ahead|behind' | awk '{ print $3 " " $4 }' | tr -d '[|]'
 ```
 
 
-## Rebase
-
-### To apply all your yet-to-be-pushed commits on top of the remote tree commits allowing your commits to be straight in a row and without branches
-```
-git pull --rebase
-```
-
-
 ## Rerere
 
 http://scottchacon.com/2010/03/08/rerere.html
