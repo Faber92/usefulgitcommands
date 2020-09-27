@@ -60,8 +60,3 @@ git config --global commit.gpgsign true
 ```
 git status -sb | egrep 'ahead|behind' | awk '{ print $3 " " $4 }' | tr -d '[|]'
 ```
-
-
-## Rerere
-
-http://scottchacon.com/2010/03/08/rerere.html
