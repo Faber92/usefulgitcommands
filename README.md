@@ -42,20 +42,6 @@ git_remove_merged_in() { git fetch -p && git checkout $1 && git branch --merged 
 git_remove_merged_in() { git fetch -pq && git checkout $1 -q && for branch in `git branch --merged | egrep -v "(^\*|master|Develop)"`; do echo "Removing branch '$branch'"; git branch -d $branch; done }
 ```
 
-
-## Sign commits
-
-### To configure your Git client to sign commits by default for a local repository
-```
-git config commit.gpgsign true
-```
-
-### To sign all commits by default in any local repository on your computer
-```
-git config --global commit.gpgsign true
-```
-
-
 ## Ahead/Behind commit count
 ```
 git status -sb | egrep 'ahead|behind' | awk '{ print $3 " " $4 }' | tr -d '[|]'
